@@ -1,0 +1,18 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Import_m extends CI_Model {
+	public function __construct()
+	{
+		$this->load->database();
+	}
+
+	public function insert($data) {
+		$res = $this->db->insert_batch('tagenda',$data);
+		if($res){
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+	}
+}
+?>
