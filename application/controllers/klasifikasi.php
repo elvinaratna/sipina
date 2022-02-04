@@ -44,11 +44,11 @@
 		}
 		
 
-	public function delete($kode_klasifikasi, $id_jenisarsip)
+	public function delete($id_jenisarsip,$kode_klasifikasi)
     {
         $id_arsip['id_jenisarsip'] = $this->uri->segment(3);
 		$id['kode_klasifikasi'] = $this->uri->segment(4);
-        $this->klasifikasi_m->delete($kode_klasifikasi, $id_jenisarsip);
+        $this->klasifikasi_m->delete($id_jenisarsip,$kode_klasifikasi);
 
         //redirect
         redirect('klasifikasi');

@@ -164,10 +164,8 @@ if($this->session->userdata('logged_in') == TRUE)
 			$('#confirm_str').html('Apakah Anda yakin akan menghapus data ?');
 			
 			$('#delete').show();
-			
-			var id = this.id.substr(7);
-			
-			$('#id_jenisarsip').val(id);
+						
+			$('#id_jenisarsip').val();
 		});
 		
 		$('#delete').click(function() {

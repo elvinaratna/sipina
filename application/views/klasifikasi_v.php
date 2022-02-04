@@ -164,13 +164,12 @@ if($this->session->userdata('logged_in') == TRUE)
 			
 			$('#delete').show();
 			
-			var id = this.id.substr(7);
-			
-			$('#id_jenissurat').val(id);
+			$('#kode_klasifikasi').val();
+			$('#id_jenisarsip').val();
 		});
 		
 		$('#delete').click(function() {
-			window.location = '<?PHP echo base_url(); ?>/klasifikasi/delete/' + $('#id_jenissurat').val();
+			window.location = '<?PHP echo base_url(); ?>/klasifikasi/delete/' + $('#id_jenisarsip').val() + $('#kode_klasifikasi').val();
 		});
 		
 		

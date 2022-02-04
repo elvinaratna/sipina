@@ -58,7 +58,7 @@
 		$this->db->update('mklasifikasi', $data);
 	}
 	
-		public function delete($kode_klasifikasi, $id_jenisarsip)
+		public function delete($id_jenisarsip, $kode_klasifikasi)
 			{
 
 				$query = $this->db->delete("mklasifikasi",array("id_jenisarsip" => $id_jenisarsip, "kode_klasifikasi" => $kode_klasifikasi));
