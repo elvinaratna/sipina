@@ -176,7 +176,7 @@ if($this->session->userdata('logged_in') == TRUE)
 		
 		$('.update').click(function() {			
 			var id = this.id.substr(11);
-			var id_arsip = this.id.substr(5);
+			var id_arsip = this.id.substr(5,5);
 			$('#id_jenisarsip').val(id_arsip);
 			$('#kode_klasifikasi').val(id);
 			$('#id_jenisarsip_tmp').val(id_arsip);

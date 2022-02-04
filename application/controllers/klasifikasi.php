@@ -55,7 +55,7 @@
 
     }
 	public function update() {
-			$id_jenisarsip		= $this->input->post('id_jenisarsip');	
+			$id_jenisarsip		= $this->input->post('id_jenisarsip_tmp');	
 			$kode_klasifikasi	= $this->input->post('kode_klasifikasi_tmp');
 			$nama				= $this->input->post('nama');
 		
