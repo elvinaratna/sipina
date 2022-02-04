@@ -182,8 +182,7 @@ if($this->session->userdata('logged_in') == TRUE)
 			$('#id_jenisarsip_tmp').val(id_arsip);
 			$('#kode_klasifikasi_tmp').val(id);
 			
-			$('#id_jenisarsip').val($('#id_jenisarsip_' + id).val());
-			$('#kode_klasifikasi').val($('#kode_klasifikasi_' + id).val());
+			
 			$('#nama').val($('#nama_' + id).val());
 			
 			

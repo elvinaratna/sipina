@@ -34,9 +34,10 @@ if($this->session->userdata('logged_in') == TRUE)
 		  <form method="post" role="form" id="form_jenisarsip" enctype="multipart/form-data">
             <div class="col-md-6">
               <div class="form-group">
-					<input type="hidden" name="id_jenisarsip_tmp" id="id_jenisarsip_tmp">
+              	  <input type="hidden" name="id_jenissurat_tmp" id="id_jenissurat_tmp">		
 					<label for="nama">ID Jenis Surat</label>
-                  <input type="text" class="form-control" id="id_jenissurat" name="id_jenissurat" placeholder="ID Jenis Surat" required>			  
+                  <input type="text" class="form-control" id="id_jenissurat" name="id_jenissurat" placeholder="ID Jenis Surat" required>	
+          <input type="hidden" name="id_jenisarsip_tmp" id="id_jenisarsip_tmp">		  
 				  <label for="nama">ID Jenis Arsip</label>
                   <input type="text" class="form-control" id="id_jenisarsip" name="id_jenisarsip" placeholder="ID Jenis Arsip" required>
                   <label for="nama">Nama</label>
@@ -174,17 +175,19 @@ if($this->session->userdata('logged_in') == TRUE)
 		});
 		
 		$('.update').click(function() {
-			
+			//var id_surat = this.id.substr(5);
 			var id = this.id.substr(5);
+			//$('#id_jenissurat').val(id_surat);
 			$('#id_jenisarsip').val(id);
+			//$('#id_jenissurat_tmp').val(id_surat);
 			$('#id_jenisarsip_tmp').val(id);
 			
-			$('#id_jenissurat').val($('#id_jenissurat_' + id).val());
 			$('#nama').val($('#nama_' + id).val());
 			
 			$('#id_jenissurat').attr('disabled', true);
 			$('#id_jenisarsip').attr('disabled', true);
 			
+			$('#id_jenissurat').show();
 			$('#id_jenisarsip').show();
 			$('#insert').hide();
 			$('#update').show();
